@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="(MVP)Fragment"
+    description="创建自定义的fragment"
+    minApi="7"
+    minBuildApi="8">
+
+    <category value="Fragment" />
+    <formfactor value="Mobile" />
+    <parameter
+        id="mvpView"
+        name="mvp view"
+        type="string"
+        constraints="class"
+        suggest="${underscoreToCamelCase(classToResource(className))}MvpView"
+        default="MvpView"
+        help="mvp的view 代码中有就传递写class的名字 没有就创建一个"/>
+    <parameter
+        id="ismvpView"
+        name="是否创建view"
+        type="boolean"
+        default="true"
+        help="如果不创建，需要填入正确的class名称"/>
+    <parameter
+        id="mvpPresenter"
+        name="mvp Presenter"
+        type="string"
+        constraints="class"
+        suggest="${underscoreToCamelCase(classToResource(className))}Presenter"
+        default="MvpPresenter"
+        help="mvp的Presenter  代码中有就传递写class的名字 没有就创建一个"/>
+    <parameter
+        id="ismvpPresenter"
+        name="是否创建presenter"
+        type="boolean"
+        default="true"
+        help="如果不创建，需要填入正确的class名称"/>
+    <parameter
+        id="className"
+        name="Fragment Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="MvpFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="includeLayout"
+        name="Create layout XML?"
+        type="boolean"
+        default="true"
+        help="Generate a layout XML for the fragment" />
+
+    <parameter
+        id="fragmentName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="fragment_blank"
+        visibility="includeLayout"
+        suggest="${fragmentToLayout(className)}"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="includeFactory"
+        name="Include fragment factory methods?"
+        type="boolean"
+        default="true"
+        help="Generate static fragment factory methods for easy instantiation" />
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

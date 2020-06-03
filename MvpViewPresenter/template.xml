@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="MvpPresenter"
+    description="创建自定义的fragment"
+    minApi="7"
+    minBuildApi="8">
+
+    <category value="Fragment" />
+    <formfactor value="Mobile" />
+    <parameter
+        id="mvpView"
+        name="mvp view"
+        type="string"
+        constraints="class"
+        suggest="${underscoreToCamelCase(classToResource(mvpPresenter))}MvpView"
+        default="MvpView"
+        help="mvp的view 代码中有就传递写class的名字 没有就创建一个"/>
+    <parameter
+        id="ismvpView"
+        name="是否创建view"
+        type="boolean"
+        default="true"
+        help="如果不创建，需要填入正确的class名称"/>
+    <parameter
+        id="mvpPresenter"
+        name="mvp Presenter"
+        type="string"
+        constraints="class"
+        suggest="${underscoreToCamelCase(classToResource(mvpView))}Presenter"
+        default="MvpPresenter"
+        help="mvp的Presenter  代码中有就传递写class的名字 没有就创建一个"/>
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
