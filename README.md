@@ -11,3 +11,8 @@
     globals 文件中的<#include "root://activities/common/common_globals.xml.ftl" /> 可以向上的 
 
 ####小声BB,想写MVVM,mvc快把项目写完了，然后要改成mvp，难受。搬砖不容易，加油吧
+
+
+
+
+嗯，这个复用性太差了[手动狗头]，我没有导入其他class，所以只有一个架子。还是自己复制一个改成自己的代码吧[滑稽.png]
