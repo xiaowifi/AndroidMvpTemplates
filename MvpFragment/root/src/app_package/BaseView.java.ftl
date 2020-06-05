@@ -1,5 +1,5 @@
 package ${packageName};
 
-public class ${mvpView} extends BaseActivityMvpView {
+public interface ${mvpView} extends BaseActivityMvpView {
 
 }
