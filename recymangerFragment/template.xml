@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="recyleMangerFragment"
+    description="fragment+manger+layout"
+    minApi="7"
+    minBuildApi="8">
+
+    <category value="Fragment" />
+    <formfactor value="Mobile" />
+    <parameter
+        id="fragment_name"
+        name="fragment name"
+        type="string"
+        constraints="class"
+        help="fragment name"/>
+    <parameter
+        id="manger_name"
+        name="manger name"
+        type="string"
+        constraints="class"
+        help="manger name"/>
+    <parameter
+        id="frame_id"
+        name="frame id"
+        type="string"
+        constraints="class"
+        help="frame_id"/>
+    <parameter
+        id="layout_name"
+        name="show fragment manger Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="fragment_blank"
+        visibility="includeLayout"
+        help="The name of the layout to create" />
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

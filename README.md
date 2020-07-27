@@ -12,7 +12,16 @@
 
 ####小声BB,想写MVVM,mvc快把项目写完了，然后要改成mvp，难受。搬砖不容易，加油吧
 
+##recyleMangerFragment
+   因为某种原因，需要使用recyleView +fragment 实现动态效果。<br/>
+   其实好像用view也可以实现哈。view 的先放一放，先用fragment实现再说吧。<br/>
+###思路
+    ：因为fragmentmanger加载fragment是需要id的，但是recycle中的每个item的iD是一样的，所以需要不用的item。
+      所以模板需要：
+        fragment name
+        manger name
+        layout name
+        id
 
-
-
-嗯，这个复用性太差了[手动狗头]，我没有导入其他class，所以只有一个架子。还是自己复制一个改成自己的代码吧[滑稽.png]
+嗯，这个复用性太差了[手动狗头]
+[滑稽.png]
