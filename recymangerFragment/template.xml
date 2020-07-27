@@ -29,12 +29,10 @@
         help="frame_id"/>
     <parameter
         id="layout_name"
-        name="show fragment manger Layout Name"
+        name="layout_name"
         type="string"
-        constraints="layout|nonempty|unique"
-        default="fragment_blank"
-        visibility="includeLayout"
-        help="The name of the layout to create" />
+        constraints="class"
+        help="layout_name"/>
     <thumbs>
         <thumb>template_blank_fragment.png</thumb>
     </thumbs>
